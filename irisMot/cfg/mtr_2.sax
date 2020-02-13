@@ -16,7 +16,7 @@ epicsEnvSet("ECMC_CMD_FRM_OTHER_PLC_ENABLE",   "1")      # Allow commands from P
 epicsEnvSet("ECMC_CMD_AXIS_PLC_ENABLE",        "1")      # Enable Axis PLC
 # Each line below is appended to one single expression/source. 
 # Executed in sync with axis (before)
-epicsEnvSet("ECMC_AXIS_EXPR_LINE_1",           "ax2.traj.setpos:=ax7.traj.setpos-(ax8.traj.setpos/2)|")
+epicsEnvSet("ECMC_AXIS_EXPR_LINE_1",           "ax2.traj.setpos:=ax7.traj.setpos+(ax8.traj.setpos/2)|")
 epicsEnvSet("ECMC_AXIS_EXPR_LINE_2",           "")
 epicsEnvSet("ECMC_AXIS_EXPR_LINE_3",           "")
 epicsEnvSet("ECMC_AXIS_EXPR_LINE_4",           "")

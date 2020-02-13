@@ -1,5 +1,4 @@
 ########################
-## NOTE: NOT tested with hardware. Please look at example MCU1025_slitdemo for a tested example
 
 ############# Encoder
 epicsEnvSet("ECMC_ENC_SOURCE",                 "1")       # 0 Internal (from hardware), 1 from PLC
@@ -16,4 +15,4 @@ epicsEnvSet("ECMC_CMD_FRM_OTHER_PLC_ENABLE",  "1")        # Allow commands from 
 epicsEnvSet("ECMC_CMD_AXIS_PLC_ENABLE",       "1")        # Enable Axis PLC
 # Each line below is appended to one single expression/source. 
 # Executed in sync with axis (before)
-epicsEnvSet("ECMC_AXIS_EXPR_LINE_1",           "ax8.enc.actpos:=ax4.enc.actpos-(ax1.enc.actpos)|")
+epicsEnvSet("ECMC_AXIS_EXPR_LINE_1",           "ax8.enc.actpos:=ax1.enc.actpos-(ax4.enc.actpos)|")
